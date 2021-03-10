@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.darkTheme {
+  background-color: hsl(207, 26%, 17%);
+}
+
+.lightTheme {
+  background-color: hsl(0, 0%, 98%);
+}
