@@ -7,7 +7,6 @@ const Container = styled.header `
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
@@ -23,15 +22,17 @@ const Button = styled.button `
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
+  margin-block-end: 1rem;
+  text-transform: capitalize;
 `;
 
 
 export default function Header() {
-  const {toogleTheme} = useContext(Context)
+  const {toogleTheme, theme} = useContext(Context)
   return (
-    <Container>
-      <Title>Where in the world?</Title>
-      <Button onClick={toogleTheme}> Dark mode</Button>
+    <Container className={theme ? 'elementDarkTheme' : 'elementLightTheme'}>
+      <Title className={theme ? 'lightColorTheme' : 'darkColorTheme'}>Where in the world?</Title>
+      <Button className={theme ? 'lightThemeIcons' : 'darkThemeIcons'} onClick={toogleTheme}> Dark mode</Button>
     </Container>
   )
 }

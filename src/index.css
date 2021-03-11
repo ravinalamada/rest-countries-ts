@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.elementDarkTheme {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.elementLightTheme {
+  background-color:  hsl(0, 0%, 98%);
+}
+
+.darkColorTheme {
+  color: hsl(200, 15%, 8%);
+}
+
+.lightColorTheme {
+  color: white;
+}
+
+.lightTextTheme {
+  color: hsl(209, 23%, 22%);
+}
+
+.elementDarkTheme::placeholder {
+  color: white;
+}
+
+.darkThemeIcons {
+  outline: none;
+  background-color: hsl(209, 23%, 22%);
+}
+
+.lightThemeIcons {
+  outline: none;
+  background-color: hsl(0, 0%, 98%);
+  color: white;
+}
+
+.darkThemeIcons::before {
+  display: block;
+  content: '';
+  background-image: url('./icons/lightmode-moon.svg');
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 1.6rem;
+  left: -1.8rem;
+}
+
+.lightThemeIcons::before {
+  display: block;
+  content: '';
+  background-image: url('./icons/darkmode.svg');
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 1.6rem;
+  left: -1.8rem;
+}

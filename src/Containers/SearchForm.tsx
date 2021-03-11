@@ -22,7 +22,6 @@ const Fieldset = styled.fieldset `
 
   select,
   input {
-    background-color: white;
     border-color: transparent;
     border-radius: 9px;
     padding-top: 10px;
@@ -40,18 +39,22 @@ const Fieldset = styled.fieldset `
 `;
 
 const SearchForm: React.FC = () => {
-  const {countries, countryName, countryRegion, selectCountryByRegion ,searchCountryByName} = useContext(Context);
+  const {countries, theme, countryName, countryRegion, selectCountryByRegion ,searchCountryByName} = useContext(Context);
 
   return (
     <Form>
       <Fieldset>
-        <input type="text"
+        <input className={theme ? 'elementDarkTheme' : 'elementLightTheme'}
+               type="text"
                value={countryName}
                onChange={searchCountryByName}
                placeholder="Search for a country..."/>
       </Fieldset>
       <Fieldset>
-        <select value={countryRegion} onChange={selectCountryByRegion}>
+        <select
+              className={theme ? 'elementDarkTheme' : 'elementLightTheme'}
+              value={countryRegion}
+              onChange={selectCountryByRegion}>
           {
             countries.map((country, i) => (
               <option key={i + i}>{country.region}</option>
