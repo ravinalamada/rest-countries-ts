@@ -40,7 +40,7 @@ export type State = {
 
 export type Action =
 | { type: 'FETCH_DATA', payload: CountryType[] }
-| {type: 'SEARCH_COUNTRY_BY_NAME', payload: string}
+| {type: 'SEARCH_COUNTRY_BY_NAME', payload: string }
 | {type: 'SELECT_COUNTRY_BY_REGION', payload: string}
 | {type: 'TOOGLE_THEME'}
 

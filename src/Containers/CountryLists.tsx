@@ -41,11 +41,13 @@ export const Wrapper = styled.div `
 
 
 const CountryLists: React.FC = () => {
-  const {countries, countryName, theme} = useContext(Context);
+  const {countries, countryName, countryRegion , theme} = useContext(Context);
   return (
     <Container>
       { countries
-          .filter(country => country.name.toLowerCase().includes(countryName.toLowerCase()))
+          .filter(country => country.name.toLowerCase().includes(countryName.toLowerCase())
+           &&
+           country.region.toLowerCase().includes(countryRegion.toLowerCase()))
           .map((country) => {
           return (
           <Items className={theme ? 'elementDarkTheme' : 'elementLightTheme'} key={country.name}>

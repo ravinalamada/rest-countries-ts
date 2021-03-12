@@ -14,10 +14,12 @@ code {
 
 .elementDarkTheme {
   background-color: hsl(209, 23%, 22%);
+  color: white;
 }
 
 .elementLightTheme {
   background-color:  hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
 }
 
 .darkColorTheme {
@@ -35,6 +37,7 @@ code {
 .elementDarkTheme::placeholder {
   color: white;
 }
+
 
 .darkThemeIcons {
   outline: none;

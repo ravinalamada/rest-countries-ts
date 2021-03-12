@@ -3,11 +3,17 @@ import {Context} from './GlobalContext';
 import styled from 'styled-components';
 
 type Props = {
-  name: string;
-  region: string,
-  searchCountry: string;
-  preventDefault: () => {};
+
 }
+
+const regionArr = [
+  {region:'Americas',
+  id:"1"},
+  {region:'Asia', id:"2"},
+  {region:'Europe', id:"3"},
+  {region:'Africa', id:"4"},
+  {region:'Oceania', id:"5"}
+];
 
 const Form = styled.form `
   display: flex;
@@ -56,8 +62,8 @@ const SearchForm: React.FC = () => {
               value={countryRegion}
               onChange={selectCountryByRegion}>
           {
-            countries.map((country, i) => (
-              <option key={i + i}>{country.region}</option>
+            regionArr.map((item) => (
+              <option className={theme ? 'lightColorTheme' : 'darkColorTheme'} key={item.id} value={item.region}>{item.region}</option>
             ))
           }
         </select>
