@@ -18,7 +18,7 @@ code {
 }
 
 .elementLightTheme {
-  background-color:  hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 98%);
   color: hsl(200, 15%, 8%);
 }
 
@@ -38,7 +38,6 @@ code {
   color: white;
 }
 
-
 .darkThemeIcons {
   outline: none;
   background-color: hsl(209, 23%, 22%);
@@ -50,26 +49,50 @@ code {
   color: white;
 }
 
-.darkThemeIcons::before {
-  display: block;
-  content: '';
-  background-image: url('./icons/lightmode-moon.svg');
-  background-repeat: no-repeat;
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-  top: 1.6rem;
-  left: -1.8rem;
+.darkThemeIcons,
+.lightThemeIcons {
+  display: inline-flex;
+  padding: 0;
 }
 
+.darkThemeIcons::before,
 .lightThemeIcons::before {
   display: block;
   content: '';
-  background-image: url('./icons/darkmode.svg');
   background-repeat: no-repeat;
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-  top: 1.6rem;
-  left: -1.8rem;
+  background-position: center;
+  margin-right: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.darkThemeIcons::before {
+  background-image: url('./icons/lightmode-moon.svg');
+}
+
+.lightThemeIcons::before {
+  background-image: url('./icons/darkmode.svg');
+}
+
+.lightInput {
+  background-image: url('./icons/search.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(209, 23%, 22%);
+}
+
+.darkInput {
+  background-image: url('./icons/white-search.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+@media (min-width: 467px) {
+  .darkThemeIcons::before,
+  .lightThemeIcons::before {
+    width: 2rem;
+    height: 2rem;
+  }
 }
