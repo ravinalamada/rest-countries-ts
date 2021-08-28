@@ -14,7 +14,7 @@ const regionArr = [
 
 const Form = styled.form`
   display: grid;
-  grid-template-columns: 34rem 20rem;
+  grid-template-columns: 48rem 20rem;
   justify-content: space-between;
   align-items: center;
   max-width: 128rem;
@@ -38,7 +38,7 @@ const Form = styled.form`
 const Fieldset = styled.fieldset`
   border-color: transparent;
   border-radius: 0.5rem;
-  padding: 1.4rem 3.2rem;
+  padding: 1.7rem 3.2rem;
   box-shadow: 0 0.2rem 0.9rem 0 rgb(0 0 0 / 5%);
 
   select,
@@ -70,9 +70,6 @@ const Fieldset = styled.fieldset`
     line-height: 2rem;
     padding-left: 0;
     font-weight: 400;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
   }
 `
 
@@ -111,6 +108,23 @@ const SearchForm: React.FC = () => {
             </option>
           ))}
         </select>
+        <div className='dropdown-container'>
+          <div className='dropdown'></div>
+          <div className='dropdown-menu'>
+            <ul className='menu'>
+              {regionArr.map((item) => (
+                <li
+                  className={`region ${
+                    theme ? 'darkColorTheme' : 'lightColorTheme'
+                  }`}
+                  key={item.id}
+                  value={item.region}>
+                  {item.region}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </Fieldset>
     </Form>
   )
