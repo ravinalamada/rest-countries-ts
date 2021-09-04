@@ -69,10 +69,10 @@ export const GlobalContext: React.FC = ({ children }) => {
         countryRegion: state.countryRegion,
         searchCountryByName: (e) =>
           dispatch({ type: 'SEARCH_COUNTRY_BY_NAME', payload: e.target.value }),
-        selectCountryByRegion: (e) =>
+        selectCountryByRegion: (props) =>
           dispatch({
             type: 'SELECT_COUNTRY_BY_REGION',
-            payload: e.target.value,
+            payload: props,
           }),
         toogleTheme: () => dispatch({ type: 'TOOGLE_THEME' }),
       }}>

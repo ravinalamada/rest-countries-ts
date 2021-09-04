@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 export const Container = styled.ul`
   text-align: left;
-  margin-top: 3.2rem;
+  margin-top: 4.8rem;
   max-width: 127rem;
   display: grid;
   row-gap: 4rem;

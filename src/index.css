@@ -18,7 +18,7 @@ code {
 }
 
 .elementLightTheme {
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 100%);
   color: hsl(200, 15%, 8%);
 }
 
@@ -65,12 +65,21 @@ code {
   width: 1.6rem;
   height: 1.6rem;
 }
+
 .darkThemeIcons::before {
   background-image: url('./icons/lightmode-moon.svg');
 }
 
 .lightThemeIcons::before {
-  background-image: url('./icons/darkmode.svg');
+  background-image: url('./icons/darkmode-moon.svg');
+}
+
+.darkDropdownIcons {
+  background-image: url('./icons/dark-dropdown.svg');
+}
+
+.whiteDropdownIcons {
+  background-image: url('./icons/white-dropdown.svg');
 }
 
 .lightInput {

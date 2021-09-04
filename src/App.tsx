@@ -6,7 +6,6 @@ import SearchForm from './Containers/SearchForm'
 import CountryLists from './Containers/CountryLists'
 import CountryDetails from './Containers/CountryDetails'
 import { Context } from './Containers/GlobalContext'
-import styled from 'styled-components'
 
 function App() {
   const { theme } = useContext(Context)

@@ -1,9 +1,7 @@
-import { type } from 'node:os'
 import React, { useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Context } from './GlobalContext'
 import styled from 'styled-components'
-import { Images } from './CountryLists'
 
 type Props = {
   countryName: string
@@ -82,7 +80,7 @@ const SmallText = styled.p`
 
 const CountryDetails: React.FC = () => {
   const { countryName }: Props = useParams()
-  const { countries, loading } = useContext(Context)
+  const { countries } = useContext(Context)
   const findCountry = countries.find((country) => country.name === countryName)
   const topLevelDomain = findCountry?.topLevelDomain[0]
   const languages = findCountry?.languages.map((lang) => (
